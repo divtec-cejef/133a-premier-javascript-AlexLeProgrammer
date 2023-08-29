@@ -4,7 +4,13 @@
  * @version 0.0.1
  * @since   2023-08-29
  */
+"use strict";
 
-let msg = 'Bonjour';
+// Récupérer tout les paragraphes du document
+let tabPara = document.querySelectorAll("p");
 
-console.log(msg);
+// Récupérer le bouton avec la classe ajouter
+let boutonAjouter = document.querySelector(".ajouter");
+
+// Affiche dans la console
+console.log(tabPara, boutonAjouter);

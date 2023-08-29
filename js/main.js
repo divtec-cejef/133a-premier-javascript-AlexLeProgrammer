@@ -6,11 +6,17 @@
  */
 "use strict";
 
-// Récupérer tout les paragraphes du document
-let tabPara = document.querySelectorAll("p");
-
-// Récupérer le bouton avec la classe ajouter
+// Récupérer les éléments
 let boutonAjouter = document.querySelector(".ajouter");
+let txtArticle = document.querySelector("#article");
+let ulArticles = document.querySelector("ul.articles");
 
 // Affiche dans la console
-console.log(tabPara, boutonAjouter);
+console.log(boutonAjouter, txtArticle, ulArticles);
+
+// Ecoute le clic du bouton
+boutonAjouter.addEventListener("click", () => {
+    ulArticles.innerHTML += "<li>" + txtArticle.value + "</li>";
+    // Vide le champ texte
+    txtArticle.value = "";
+});
